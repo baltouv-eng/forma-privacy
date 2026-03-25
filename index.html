@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité — FORMA.</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #080810;
+      color: #e0e0f0;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    .logo {
+      font-size: 32px;
+      font-weight: 800;
+      color: #c8f53e;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #6b6b8a;
+      font-size: 14px;
+      margin-bottom: 48px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .updated {
+      color: #6b6b8a;
+      font-size: 13px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #c8f53e;
+      margin: 36px 0 12px;
+    }
+    p { color: #b0b0c8; font-size: 15px; margin-bottom: 12px; }
+    ul { color: #b0b0c8; font-size: 15px; padding-left: 20px; margin-bottom: 12px; }
+    ul li { margin-bottom: 6px; }
+    .card {
+      background: #12121e;
+      border: 1px solid #1e1e30;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 12px;
+    }
+    .highlight { color: #c8f53e; font-weight: 600; }
+    .contact {
+      background: #12121e;
+      border: 1px solid #1e1e30;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 40px;
+    }
+    .contact a { color: #c8f53e; text-decoration: none; }
+    hr { border: none; border-top: 1px solid #1e1e30; margin: 40px 0; }
+    .footer { color: #6b6b8a; font-size: 13px; text-align: center; margin-top: 48px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">FORMA.</div>
+    <div class="subtitle">Ton Life OS Performance</div>
+
+    <h1>Politique de confidentialité</h1>
+    <p class="updated">Dernière mise à jour : mars 2026</p>
+
+    <p>
+      FORMA. ("nous", "notre", "l'application") s'engage à protéger ta vie privée.
+      Cette politique explique quelles données nous collectons, comment nous les utilisons,
+      et quels sont tes droits.
+    </p>
+
+    <h2>1. Données collectées</h2>
+    <div class="card">
+      <p><span class="highlight">Données de compte</span></p>
+      <ul>
+        <li>Adresse e-mail (pour la création de compte et l'authentification)</li>
+        <li>Mot de passe (stocké de manière chiffrée via Supabase Auth)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <p><span class="highlight">Données de santé et fitness</span></p>
+      <ul>
+        <li>Poids corporel et historique de poids</li>
+        <li>Données nutritionnelles (repas, calories, macros)</li>
+        <li>Séances d'entraînement et historique sportif</li>
+        <li>Humeur, énergie et score de récupération</li>
+        <li>Consommation d'eau quotidienne</li>
+      </ul>
+    </div>
+    <div class="card">
+      <p><span class="highlight">Photos de repas (analyse IA)</span></p>
+      <ul>
+        <li>Les photos que tu prends via l'app sont envoyées à l'API Google Gemini pour analyse nutritionnelle</li>
+        <li>Ces images ne sont pas stockées sur nos serveurs après traitement</li>
+        <li>Google Gemini traite les images conformément à sa propre politique de confidentialité</li>
+      </ul>
+    </div>
+    <div class="card">
+      <p><span class="highlight">Données de productivité</span></p>
+      <ul>
+        <li>Tâches et to-do lists</li>
+        <li>Sessions de focus (timer Pomodoro)</li>
+        <li>Routines de bien-être</li>
+      </ul>
+    </div>
+
+    <h2>2. Utilisation des données</h2>
+    <p>Nous utilisons tes données uniquement pour :</p>
+    <ul>
+      <li>Fournir et personnaliser les fonctionnalités de l'application</li>
+      <li>Calculer tes progressions et statistiques personnelles</li>
+      <li>Analyser nutritionnellement tes repas via l'IA</li>
+      <li>Sauvegarder et synchroniser tes données entre appareils (utilisateurs Premium)</li>
+    </ul>
+    <p>
+      <span class="highlight">Nous ne vendons jamais tes données à des tiers.</span>
+      Nous n'affichons pas de publicités et nous ne partageons pas tes informations personnelles
+      avec des partenaires commerciaux.
+    </p>
+
+    <h2>3. Stockage et sécurité</h2>
+    <p>
+      Tes données sont stockées localement sur ton appareil (AsyncStorage) et, pour les
+      utilisateurs Premium, synchronisées de manière sécurisée via Supabase (infrastructure
+      hébergée sur AWS, conforme RGPD).
+    </p>
+    <p>
+      L'authentification utilise des tokens JWT sécurisés. Toutes les communications avec
+      nos serveurs sont chiffrées via HTTPS/TLS.
+    </p>
+
+    <h2>4. Partage avec des tiers</h2>
+    <p>Nous faisons appel aux services tiers suivants :</p>
+    <ul>
+      <li><span class="highlight">Supabase</span> — authentification et base de données (RGPD compliant)</li>
+      <li><span class="highlight">Google Gemini</span> — analyse IA des photos de repas et recherche nutritionnelle</li>
+      <li><span class="highlight">Open Food Facts</span> — base de données publique pour le scan de codes-barres</li>
+      <li><span class="highlight">RevenueCat</span> — gestion des abonnements in-app (utilisateurs Premium)</li>
+    </ul>
+
+    <h2>5. Permissions utilisées</h2>
+    <ul>
+      <li><span class="highlight">Caméra</span> — pour photographier tes repas et scanner les codes-barres</li>
+      <li><span class="highlight">Bibliothèque photos</span> — pour sélectionner une photo existante à analyser</li>
+      <li><span class="highlight">Notifications</span> — pour t'alerter en fin de timer de repos (séances sport)</li>
+    </ul>
+
+    <h2>6. Conservation des données</h2>
+    <p>
+      Tes données sont conservées tant que ton compte est actif. Tu peux supprimer ton compte
+      et toutes tes données associées à tout moment depuis les paramètres de l'application
+      (Profil → Supprimer mon compte).
+    </p>
+
+    <h2>7. Tes droits (RGPD)</h2>
+    <p>Conformément au RGPD, tu as le droit de :</p>
+    <ul>
+      <li>Accéder à tes données personnelles</li>
+      <li>Rectifier tes données inexactes</li>
+      <li>Supprimer tes données ("droit à l'oubli")</li>
+      <li>Exporter tes données (fonctionnalité Premium)</li>
+      <li>Retirer ton consentement à tout moment</li>
+    </ul>
+
+    <h2>8. Enfants</h2>
+    <p>
+      FORMA. n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas
+      sciemment de données personnelles concernant des enfants.
+    </p>
+
+    <h2>9. Modifications</h2>
+    <p>
+      Nous pouvons mettre à jour cette politique occasionnellement. Toute modification
+      significative sera notifiée dans l'application. La date de dernière mise à jour
+      est indiquée en haut de cette page.
+    </p>
+
+    <hr />
+
+    <div class="contact">
+      <p><span class="highlight">Contact</span></p>
+      <p style="margin-top: 8px;">
+        Pour toute question concernant cette politique de confidentialité ou tes données,
+        contacte-nous à :<br />
+        <a href="mailto:contact@forma-app.fr">contact@forma-app.fr</a>
+      </p>
+    </div>
+
+    <p class="footer">© 2026 FORMA. — Tous droits réservés</p>
+  </div>
+</body>
+</html>
